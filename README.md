@@ -38,3 +38,15 @@ upsert: boolean
 document: Document<T> // if options.returnUpdatedDocs set to true and options.multi set to falsy value
 documents: Document<T>[] // if options.returnUpdatedDocs set to true and options.multi set to truthly value
 ```
+
+---
+More Notes
+
+`Cursor` objects has a `.cursor` prop that points to the original nedb cursor
+
+`Datastore` objects has a `.nedb` prop that points to the original nedb datastore
+
+So if you must you can do `collection.nedb.someOp((err, result) => ()}`
+
+
+If you have a comment open an issue in this repo :)
