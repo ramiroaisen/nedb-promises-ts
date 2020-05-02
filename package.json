@@ -1,6 +1,6 @@
 {
   "name": "nedb-promises-ts",
-  "version": "0.0.1",
+  "version": "0.0.1-2",
   "description": "Nedb with promises and typescript definitions",
   "main": "index.js",
   "types": "index.d.ts",

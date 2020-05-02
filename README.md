@@ -52,6 +52,7 @@ await collection.ensureIndex(fieldName: keyof Document<T>, options: IndexOptions
 ```
 
 Everything is this repo works as expected and has a typescript definition
+
 The functions have the same name as in the original nedb
 
 Note: update queries resolves to an object with this props
