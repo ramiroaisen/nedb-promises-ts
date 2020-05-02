@@ -1,0 +1,27 @@
+{
+  "name": "nedb-promises-ts",
+  "version": "0.0.1",
+  "description": "Nedb with promises and typescript definitions",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ghithub.com/ramiroaisen/nedb-promises-ts"
+  },
+  "keywords": [
+    "nedb",
+    "promises",
+    "typescript"
+  ],
+  "author": "ramiroaisen <ramiroaisen@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "nedb": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/nedb": "ramiroaisen/nedb-types"
+  }
+}
