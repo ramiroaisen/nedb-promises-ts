@@ -65,7 +65,7 @@ export class Datastore<T> {
         this.nedb = new Nedb<T>(opts);
     }
     
-    findOne(filter: FilterQuery<Document<T>>, projection?: Projection<Document<T>>): Promise<Document<T>> {
+    findOne(filter: FilterQuery<Document<T>>, projection?: Projection<Document<T>>): Promise<Document<T> | null> {
         return new Promise((resolve, reject) => {
             this.nedb.findOne(filter, projection, (err, ...args) => {
                 if(err) reject(err);

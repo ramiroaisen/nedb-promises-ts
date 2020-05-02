@@ -13,7 +13,7 @@ export declare class Cursor<T> implements PromiseLike<Document<T>[]> {
 export declare class Datastore<T> {
     nedb: Nedb<T>;
     constructor(opts?: string | DatastoreOptions);
-    findOne(filter: FilterQuery<Document<T>>, projection?: Projection<Document<T>>): Promise<Document<T>>;
+    findOne(filter: FilterQuery<Document<T>>, projection?: Projection<Document<T>>): Promise<Document<T> | null>;
     find(filter: FilterQuery<Document<T>>, projection?: Projection<Document<T>>): Cursor<T>;
     count(filter: FilterQuery<Document<T>>): Promise<number>;
     update(filter: FilterQuery<Document<T>>, update: UpdateQuery<Document<T>>, options?: {
