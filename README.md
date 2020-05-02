@@ -1,7 +1,7 @@
 # Nedb for modern javascript
 Nedb with promises and typescript definitions
 
-for plain Nedb typings see [ramiroaisen/nedb-types](https://github.com.ar/ramiroaisen/nedb-types)
+for plain Nedb typings see [ramiroaisen/nedb-types](https://github.com/ramiroaisen/nedb-types)
 
 ---
 
