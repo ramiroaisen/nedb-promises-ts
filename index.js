@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Datastore = exports.Cursor = void 0;
 const nedb_1 = __importDefault(require("nedb"));
 const noop = () => { };
 class Cursor {
@@ -77,7 +78,7 @@ class Datastore {
             this.nedb.update(filter, update, options, (err, numAffected, result, upsert) => {
                 if (err)
                     reject(err);
-                else if (!options?.returnUpdatedDocs) {
+                else if (!options.returnUpdatedDocs) {
                     resolve({ numAffected, upsert });
                 }
                 else if (options.multi) {
