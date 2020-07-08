@@ -12,9 +12,9 @@ import Nedb, {
 const noop = () => {};
 
 export class Cursor<T> implements PromiseLike<Document<T>[]> {
-    
+
     cursor: NedbCursor<T>;
-    
+
     constructor(cursor: NedbCursor<T>) {
         this.cursor = cursor;
     }
@@ -64,7 +64,7 @@ export class Datastore<T> {
     constructor(opts?: string | DatastoreOptions) {
         this.nedb = new Nedb<T>(opts);
     }
-    
+
     findOne(filter: FilterQuery<Document<T>>, projection?: Projection<Document<T>>): Promise<Document<T> | null> {
         return new Promise((resolve, reject) => {
             this.nedb.findOne(filter, projection, (err, ...args) => {
@@ -115,9 +115,9 @@ export class Datastore<T> {
             // the unknowns here is because ts cant infer types right but is okay
             this.nedb.update(filter, update, options as any, (err, numAffected, result, upsert) => {
                 if (err) reject(err);
-                else if (!options?.returnUpdatedDocs) {
+                else if (!options!.returnUpdatedDocs) {
                     resolve({numAffected, upsert});
-                } else if (options.multi) {
+                } else if (options!.multi) {
                     resolve({numAffected, upsert, documents: result as unknown as Document<T>[]})
                 } else {
                     resolve({numAffected, upsert, document: result as unknown as Document<T>})
